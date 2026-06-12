@@ -9,7 +9,6 @@ A Claude Skill that initializes a Vibcoding (AI-driven development) project envi
 - **CLAUDE.md** — AI behavior rules (auto-loaded into context every session; the most critical file)
 - **README.md** — Project entry document
 - **ROADMAP.md** — Development roadmap
-- **VIBECODING.md** — Human-AI collaboration guide
 - **.gitignore** — Universal ignore rules
 - **memory/** — AI memory system (MEMORY.md, user-preferences.md, decisions.md)
 
@@ -102,6 +101,7 @@ These belong to later development phases (Phase 2 and beyond). This skill only s
 3. User preferences are recorded in `memory/user-preferences.md`
 4. Key architectural decisions (with dates) are recorded in `memory/decisions.md`
 5. `CLAUDE.md` is the core file — it governs all subsequent AI behavior
+6. **Vibcoding configuration placement**: All vibcoding-related configurations (Claude command whitelists, hooks, skills, subagent definitions, etc.) MUST be placed inside the `.claude/` directory at the project root. Global configuration should ONLY be used when the user explicitly requests it.
 
 ---
 

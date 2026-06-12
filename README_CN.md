@@ -9,7 +9,6 @@
 - **CLAUDE.md** —— AI 行为规则文件（每次会话自动加载，是最关键的文件）
 - **README.md** —— 项目说明入口
 - **ROADMAP.md** —— 开发路线图
-- **VIBECODING.md** —— 人机协作指南
 - **.gitignore** —— 通用版本控制忽略规则
 - **memory/** 目录 —— AI 记忆系统（包含索引、用户偏好、架构决策三份文档）
 
@@ -109,6 +108,7 @@ init-project/
 3. 用户偏好统一记录到 `memory/user-preferences.md`
 4. 关键架构决策（含日期）记录到 `memory/decisions.md`
 5. `CLAUDE.md` 是核心文件 —— 它决定了后续所有 AI 行为
+6. **Vibcoding 配置存放位置**：所有与 vibcoding 相关的配置（包括但不限于 Claude 命令白名单、hooks、skills、subagent 定义等）**必须**放在项目根目录的 `.claude/` 文件夹下。全局配置（如 `%USERPROFILE%\.claude\` 或 `~/.claude/`）仅在用户明确要求时才使用。
 
 ---
 

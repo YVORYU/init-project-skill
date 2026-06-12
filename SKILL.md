@@ -6,7 +6,7 @@ description: >
   needs during development. It asks the user about their project (language,
   framework, architecture), then creates the project documentation skeleton
   including agent behavior rules (CLAUDE.md), project specification (README.md),
-  development roadmap (ROADMAP.md), collaboration guide (VIBECODING.md), and
+  development roadmap (ROADMAP.md), and
   AI memory system (memory/). Use this when the user says "init project",
   "initialize project", "scaffold", "set up project", "Phase 1", or when
   starting a new project from scratch.
@@ -129,12 +129,7 @@ Read `references/roadmap-template.md`, replace placeholders. If the user has
 described their vision for phases, customize the phases. Otherwise use the
 default template. Write to `<project-dir>/ROADMAP.md`.
 
-### 2d. VIBECODING.md (Collaboration Guide)
-
-Read `references/vibecoding-template.md` and Write it to `<project-dir>/VIBECODING.md`.
-No placeholder replacement needed -- this file is the same for all projects.
-
-### 2e. .gitignore
+### 2d. .gitignore
 
 Copy `assets/gitignore_template` content to `<project-dir>/.gitignore`.
 Use Write to create the file.
@@ -191,3 +186,4 @@ specification and documentation layer that an AI agent needs to work effectively
 4. Record key decisions in memory/decisions.md with dates
 5. Use TaskCreate to track progress during execution
 6. The CLAUDE.md file is critical -- it governs all subsequent AI behavior
+7. **Vibcoding configuration placement**: All vibcoding-related configurations, including but not limited to Claude command whitelists, hooks, skills, subagent definitions, and other AI agent tooling, MUST be placed inside the `.claude/` directory at the project root. Global configuration (e.g., `%USERPROFILE%\.claude\` on Windows or `~/.claude/` on Unix) should ONLY be used when the user explicitly requests it. This ensures per-project isolation and portability.
